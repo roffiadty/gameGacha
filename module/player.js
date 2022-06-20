@@ -27,10 +27,10 @@ class Player {
 		startButton.style.display = 'block'
 		idPlayer.style.display = 'block'
 		started.style.display = 'block'
-		rewarded.style.display = 'block'
 		toped.style.display = 'block'
 		navStart.style.display = 'block'
-		navReward.style.display = 'block'
+		rewarded.style.display = 'block'
+		textRegist.style.display = 'none'
 		setTimeout(function () {
 			location.href = '#start'
 		}, 500)

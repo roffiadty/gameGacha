@@ -1,20 +1,3 @@
-// declaring element
-const username = document.getElementById('username')
-const registerForm = document.getElementById('registerForm')
-const logoutForm = document.getElementById('logoutForm')
-const startSection = document.getElementById('start')
-const box1 = document.getElementById('box1')
-const box2 = document.getElementById('box2')
-const box3 = document.getElementById('box3')
-const rewardImage = document.getElementById('imgReward')
-const idPlayer = document.getElementById('idPlayer')
-const started = document.getElementById('start')
-const rewarded = document.getElementById('reward')
-const toped = document.getElementById('top')
-const navStart = document.getElementById('navStart')
-const navReward = document.getElementById('navReward')
-
-const player = new Player()
 let default_option = ['😍', '🤣', '😱']
 box1.textContent = default_option[0]
 box2.textContent = default_option[1]
@@ -42,8 +25,8 @@ function reward() {
 			img.src = result.image_link
 
 			// set rangka/element di API untuk reward
-			rewardImage.appendChild(text)
 			rewardImage.appendChild(img)
+			rewardImage.appendChild(text)
 		})
 }
 
@@ -51,8 +34,11 @@ function winner() {
 	if (box1.textContent == box2.textContent && box1.textContent == box3.textContent) {
 		reward()
 		location.href = '#reward'
+		rewarded.style.display = 'block'
+		navReward.style.display = 'block'
+		notif.style.display = 'none'
 	} else {
-		alert('HAHAHA Gak Hoki lo, coba lagi!')
+		notif.style.display = 'block'
 		location.href = '#start'
 	}
 }
@@ -63,12 +49,13 @@ function start() {
 		box1.textContent = result[0]
 		box2.textContent = result[1]
 		box3.textContent = result[2]
+		notif.style.display = 'none'
 	}, 80)
-
+	
 	setTimeout(function () {
 		clearInterval(rolling)
 		winner()
-	}, 2000)
+	}, 1500)
 }
 
 onload = function () {
@@ -85,6 +72,8 @@ onload = function () {
 		toped.style.display = 'none'
 		navStart.style.display = 'none'
 		navReward.style.display = 'none'
+		textRegist.style.display = 'block'
+		notif.style.display = 'none'
 	}
 }
 
