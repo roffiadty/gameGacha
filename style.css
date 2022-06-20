@@ -164,3 +164,13 @@ section {
   background-color: wheat;
   border-radius: 15px;
 }
+
+.register {
+  background-color: white;
+  cursor: pointer;
+}
+
+.logout {
+  background-color: white;
+  cursor: pointer;
+}

@@ -24,12 +24,8 @@ class Player {
 		sessionStorage.setItem('token', this.generateToken())
 		registerForm.style.display = 'none'
 		logoutForm.style.display = 'block'
-		box1.style.display = 'block'
-		box2.style.display = 'block'
-		box3.style.display = 'block'
 		startButton.style.display = 'block'
 		idPlayer.style.display = 'block'
-		started.style.display = 'block'
 		started.style.display = 'block'
 		rewarded.style.display = 'block'
 		toped.style.display = 'block'
