@@ -172,11 +172,38 @@ section {
 
 .register {
   margin-right: auto;
-  background-color: white;
+  color: #eaeaea;
+  width: 80px;
+  height: 40px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.register:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in-out .20s;
 }
 
 .logout {
-  background-color: white;
   cursor: pointer;
+  color: #eaeaea;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.logout:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in-out .20s;
+}
+
+.form {
+  background-color: #eaeaea;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
 }
